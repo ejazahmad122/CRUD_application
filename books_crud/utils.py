@@ -2,6 +2,14 @@ import re
 from .models import Author
 
 def get_the_index_of_author(request):
+    """This function take request and return the object number of author object in Author table
+
+    Args:
+        request (Http): it will hold the post data
+
+    Returns:
+        int: object index of author in Author table
+    """
     request_author = request.data['author']
     is_author = Author.objects.filter(author= request_author)
     

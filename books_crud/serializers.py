@@ -12,4 +12,12 @@ class BookSerializer(serializers.ModelSerializer):
         fields = '__all__'
        
     def get_authors(self, obj):
+        """This function returning the author name in list form
+
+        Args:
+            obj (BookSerializer): _description_
+
+        Returns:
+            [str]: name of author
+        """
         return [obj.author.author]

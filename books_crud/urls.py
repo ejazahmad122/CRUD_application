@@ -8,5 +8,5 @@ urlpatterns = [
     path('v1/books/<int:id>/delete', delete_book, name='delete'),
     path('v1/books/<int:id>/update', update_book, name='update'),
     path('v1/books/<int:id>/', show_specific_book, name='showspecific'),
-    path('external-books/<str:name_of_book>/', ice_and_fire_api, name='iceandfire'),
+    path('external-books/<str:name_of_book>/', ice_and_fire_api, name='iceandfireapi'),
 ]

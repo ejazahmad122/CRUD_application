@@ -10,7 +10,6 @@ from .utils import get_the_index_of_author
 @api_view(['GET'])
 def ice_and_fire_api(request, name_of_book):
     """This view is used for getting data from ice and fire api of a specific searched book name
-
     Args:
         name_of_book (str): book name that is going to be seached
         request (Http): it will hold the post data
@@ -83,9 +82,9 @@ def add_book(request):
                 'data':{"book":serializer.data}
             }
             return Response(response)
-        return Response({"status":404, 'message':"somrthing went wrong while insertion !!"})
+        return Response({"status":404, 'message':"something went wrong while insertion !!"})
     except:
-        return Response({"status":404, 'message':"somrthing went wrong while insertion !!"})
+        return Response({"status":404, 'message':"something went wrong while insertion !!"})
 
 @api_view(['POST'])
 def delete_book(request, id):
